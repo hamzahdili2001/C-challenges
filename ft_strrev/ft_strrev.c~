@@ -1,0 +1,38 @@
+
+
+int	ft_strlen(char *str)
+{
+	int	l;
+
+	l = 0;
+	while (str[l])
+		l++;
+	return (l);
+}
+
+char	*ft_strrev(char *str)
+{
+	char	*end;
+	char	*start;
+	char	temp;
+
+	start = str;
+	end = str + ft_strlen(str);
+	while (start < end)
+	{
+		temp = *start;
+		*start = *end;
+		*end = temp;
+		start++;
+		end--;
+	}
+	return (str);
+}
+
+int	main(void)
+{
+	char	test[] = "Hamza is cool asf";
+	char	*str;
+
+	str = ft_strrev(test);
+}
