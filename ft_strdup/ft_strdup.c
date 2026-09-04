@@ -9,7 +9,7 @@ size_t	ft_strlen(char *str)
 		l++;
 	return (l);
 }
-char	*ft_strdub(char *src)
+char	*ft_strdup(char *src)
 {
 	char	*ptr;
 	size_t	size;
