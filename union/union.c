@@ -7,7 +7,7 @@ void	ft_putchar(int c)
 
 void	ft_union(char *s1, char *s2)
 {
-	unsigned char	printed[225] = {0};
+	unsigned char	printed[226] = {0};
 	unsigned char	c;
 
 	while (*s1)
