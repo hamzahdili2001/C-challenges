@@ -41,23 +41,29 @@ void	ft_capitalize(int index, char *str)
 int	main(int argc, char *argv[])
 {
 	int		i;
+	int		j;
 	char	*str;
 
-	if (argc != 2)
+	if (argc == 1)
 	{
 		write(1, "\n", 1);
 		return (0);
 	}
-	i = 0;
-	str = argv[1];
-	while (str[i])
+	j = 1;
+	while (j < argc)
 	{
-		if (is_alpha(&str[i]))
-			ft_capitalize(i, str);
-		else
-			ft_putchar(str[i]);
-		i++;
+		i = 0;
+		str = argv[j];
+		while (str[i])
+		{
+			if (is_alpha(&str[i]))
+				ft_capitalize(i, str);
+			else
+				ft_putchar(str[i]);
+			i++;
+		}
+		ft_putchar('\n');
+		j++;
 	}
-	ft_putchar('\n');
 	return (0);
 }
